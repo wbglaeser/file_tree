@@ -1,0 +1,7 @@
+[package]
+name = "file_hierarchy"
+version = "0.1.0"
+authors = ["wbglaeser <w.glaeser@lse.ac.uk>"]
+edition = "2018"
+
+[dependencies]
