@@ -55,7 +55,8 @@ impl Directory {
                 self.files.push(path_name.clone());
             }
         }
-        print!("{}: {}\n", self.dir_name, self.size);
+    	let size_float = self.size as f64;
+        print!("{}: {} MB \n", self.dir_name, size_float * 0.000001);
     }
 }
 
