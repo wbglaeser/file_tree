@@ -1,4 +1,5 @@
 use std::fs;
+use std::fmt;
 
 #[derive(Debug)]
 pub struct Directory {
@@ -56,7 +57,14 @@ impl Directory {
             }
         }
     	let size_float = self.size as f64;
-        print!("{}: {} MB \n", self.dir_name, size_float * 0.000001);
+        //print!("{}: {} MB \n", self.dir_name, size_float * 0.000001);
     }
 }
+
+impl fmt::Display for Directory {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self.dir_name)
+    }
+}
+
 
