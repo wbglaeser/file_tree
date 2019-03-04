@@ -11,7 +11,7 @@ pub fn print_directory (dir: &file_hierarchy::Directory, depth: usize, base_stri
     let offset = "    ".repeat(depth);
 
     // Define dir name regex
-    let re = Regex::new(r"[\w\.\-_]+$").unwrap();
+    let re = Regex::new(r"[\w.\-_]+$").unwrap();
 
     // Number of sub dirs
     let len_sds = 0;
@@ -27,12 +27,12 @@ pub fn print_directory (dir: &file_hierarchy::Directory, depth: usize, base_stri
         let size_float = sd.size as f64;
 
         let new_base = if count_var == index_last_sub_dir {
-            println!("{}└── {} -> {}M", base_string, String::from(name), size_float * 0.000001);
+            println!("{}└── {} ──> {}M", base_string, String::from(name), size_float * 0.000001);
             format!("{}{}", base_string, String::from("    "))
         }
         else {
             count_var += 1;
-            println!("{}├── {} -> {}M", base_string, String::from(name), size_float * 0.000001);
+            println!("{}├── {} ──> {}M", base_string, String::from(name), size_float * 0.000001);
             format!("{}{}", base_string, String::from("│   "))
         };
 
