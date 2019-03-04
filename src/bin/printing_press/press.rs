@@ -1,6 +1,4 @@
 extern crate regex;
-
-use file_hierarchy::Directory;
 use regex::Regex;
 
 pub fn print_directory (dir: &file_hierarchy::Directory, depth: usize, base_string: &String){
@@ -8,13 +6,9 @@ pub fn print_directory (dir: &file_hierarchy::Directory, depth: usize, base_stri
     // Define Loop variables
     let index_last_sub_dir = dir.sub_directories.len();
     let mut count_var = 1;
-    let offset = "    ".repeat(depth);
 
     // Define dir name regex
     let re = Regex::new(r"[\w.\-_]+$").unwrap();
-
-    // Number of sub dirs
-    let len_sds = 0;
 
     // Loop through sub directories
     for sd in &dir.sub_directories {

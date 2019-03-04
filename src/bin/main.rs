@@ -1,4 +1,3 @@
-use std::fs;
 use file_hierarchy::Directory;
 
 mod printing_press;
