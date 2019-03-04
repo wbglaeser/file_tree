@@ -16,7 +16,8 @@ fn main() {
     let base_string = String::from("");
     press::print_directory(&starting_dir, 0, &base_string);
 
-    let size_float = starting_dir.size as f64;
+    let size_float = starting_dir.size as f64;l
+
     println!("Total Size of Dir: {}M", size_float * 0.000001)
 }
 
