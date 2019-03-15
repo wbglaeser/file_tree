@@ -6,3 +6,6 @@ target/
 
 # Lock files
 *.lock
+
+# DS
+.DS_Store
