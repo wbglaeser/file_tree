@@ -1,8 +1,13 @@
+use clap::{
+     crate_authors, crate_description, crate_name, crate_version, App, AppSettings,      Arg, SubCommand
+ };
+
 use file_hierarchy::Directory;
 
 mod printing_press;
 
 fn main() {
+    
     let starting_dir_name = "./";
     let mut starting_dir = Directory::initialise(
         starting_dir_name.to_string());
