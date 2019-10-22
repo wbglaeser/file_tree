@@ -1,7 +1,3 @@
-use clap::{
-     crate_authors, crate_description, crate_name, crate_version, App, AppSettings,      Arg, SubCommand
- };
-
 use file_hierarchy::Directory;
 
 mod printing_press;
